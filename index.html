@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Business Idea Evaluator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Business Idea Evaluator</h1>
+        <p>Type your business idea below and click "Evaluate".</p>
+        <textarea id="idea" placeholder="Describe your business idea..."></textarea>
+        <button onclick="evaluateIdea()">Evaluate</button>
+
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <p class="score" id="score"></p>
+            <p class="verdict" id="verdict"></p>
+
+            <h3>Pros</h3>
+            <ul id="pros"></ul>
+
+            <h3>Cons</h3>
+            <ul id="cons"></ul>
+
+            <h3>Risks</h3>
+            <ul id="risks"></ul>
+
+            <h3>Next Steps</h3>
+            <ol id="next-steps"></ol>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
